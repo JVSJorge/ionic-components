@@ -1,0 +1,20 @@
+<app-header title="Grid"></app-header>
+
+<ion-content>
+  <ion-grid fixed>
+    <ion-row>
+      <ion-col size="12" size-lg="3" size-md="4" size-sm="6" *ngFor="let item of [1,2,3,4,5,6,7,8,9,10,11,12]">
+        <ion-card>
+          <ion-img src="/assets/viking.jpg"></ion-img>
+          <ion-card-header>
+            <ion-card-title>Viking</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            Awesome content lorem ipsum dolor sit amet, consectetur adipiscing elit. Awesome content lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+</ion-content>

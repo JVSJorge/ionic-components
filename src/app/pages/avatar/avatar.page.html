@@ -1,0 +1,30 @@
+<!-- <app-header title="Avatar"></app-header> -->
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons>
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Avatar</ion-title>
+    <ion-avatar slot="end">
+      <ion-img src="/assets/viking.jpg"></ion-img>
+    </ion-avatar>
+  </ion-toolbar>
+
+</ion-header>
+<ion-content>
+  <ion-chip color="primary" outline="true">
+    <ion-avatar>
+      <ion-img src="/assets/viking.jpg"></ion-img>
+    </ion-avatar>
+    <ion-label>Default</ion-label>
+  </ion-chip>
+
+  <ion-list>
+    <ion-item>
+      <ion-label>Viking</ion-label>
+      <ion-avatar slot="start">
+        <ion-img src="/assets/viking.jpg"></ion-img>
+      </ion-avatar>
+    </ion-item>
+  </ion-list>
+</ion-content>
