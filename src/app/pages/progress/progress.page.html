@@ -1,0 +1,17 @@
+<app-header title="Progress - Range"></app-header>
+
+<ion-content>
+  <!-- Default Progressbar with 50 percent -->
+  <ion-progress-bar type="determinate" [value]="percentage" color="primary"></ion-progress-bar>
+  <ion-list>
+    <ion-item>
+      <ion-range (ionChange)="onRangeChange($event)"
+        min="0" max="100"
+        dualKnobs="true" pin="true"
+        snaps="true" step="1"
+        ticks="true" value="0"
+        color="primary">
+      </ion-range>
+    </ion-item>
+  </ion-list>
+</ion-content>

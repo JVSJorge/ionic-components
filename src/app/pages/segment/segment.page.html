@@ -1,0 +1,52 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/" color="primary"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Segment</ion-title>
+  </ion-toolbar>
+  <ion-segment value="all" (ionChange)="segmentChanged($event)">
+    <ion-segment-button value="all">
+      <ion-label>Todos</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="DC Comics">
+      <ion-label>DC Comics</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="Marvel Comics">
+      <ion-label>Marvel Comics</ion-label>
+    </ion-segment-button>
+  </ion-segment>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+
+    <ng-container *ngIf="(superheroes$ | async) as superheroes; else goshtLoading">
+      <ion-item *ngFor="let heroe of superheroes" class="animate__animated animate__fadeIn">
+        <ion-label>
+          <h3>{{heroe.superhero}}<small> {{ heroe.alter_ego }} </small></h3>
+          <p>{{heroe.first_appearance}}</p>
+        </ion-label>
+        <ion-label slot="end">{{heroe.publisher}}</ion-label>
+      </ion-item>
+    </ng-container>
+
+    <!-- Gosht Loading -->
+    <ng-template #goshtLoading>
+      <ion-item *ngFor="let item of [1,2,3,4,5,6,7,8,9]">
+        <ion-label>
+          <h3>
+            <ion-skeleton-text animated style="width: 70%"></ion-skeleton-text>
+          </h3>
+          <p>
+            <ion-skeleton-text animated style="width: 100%"></ion-skeleton-text>
+          </p>
+        </ion-label>
+        <ion-label slot="end">
+          <ion-skeleton-text animated style="width: 40px"></ion-skeleton-text>
+        </ion-label>
+      </ion-item>
+    </ng-template>
+
+  </ion-list>
+</ion-content>
