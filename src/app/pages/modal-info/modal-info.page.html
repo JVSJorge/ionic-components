@@ -1,0 +1,16 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Modal Info</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-label>{{name}} - {{country}}</ion-label>
+  <ion-button (click)="onCloseWithoutArgs()" expand="block" fill="clear" shape="round">
+    Close Without Args
+  </ion-button>
+  <ion-button (click)="onCloseWithArgs()" expand="block" fill="clear" shape="round">
+    Close With Args
+  </ion-button>
+
+</ion-content>
